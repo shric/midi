@@ -13,17 +13,18 @@ It connects to an input MIDI device and reads events, it shows note up/down even
 - [SDL2](https://www.libsdl.org/)
 - [portmidi](http://portmedia.sourceforge.net/portmidi/)
 
-The build is only set up for MacOS as I quickly hard-coded a link dependency on Cocoa and
-`libportmidi.dylib` in `CMakeLists.txt`. I plan to provide Linux, and ideally other platform,
-build support as soon as I figure out cmake, or I may go back to the glory of simple Makefiles. PRs welcome.
+PRs welcome.
 
 ## build/run on MacOS
 
+- Fetch submodules: `git submodule update --init`
 - Install portmidi: `brew install portmidi`
 - Install SDL2: `brew install sdl2`
 - Install cmake: `brew install cmake`
 ```
-cmake .
+mkdir build
+cd build
+cmake ..
 make
 ./midi
 ```

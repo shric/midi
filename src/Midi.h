@@ -5,6 +5,8 @@
 #ifndef MIDI_MIDI_H
 #define MIDI_MIDI_H
 
+#include <functional>
+
 #include <portmidi.h>
 #include <porttime.h>
 
